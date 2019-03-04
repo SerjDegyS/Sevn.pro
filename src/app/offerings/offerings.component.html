@@ -1,0 +1,70 @@
+
+<div class="offering-container">
+ 
+  <div class="offering" *ngFor="let offering of offerings">
+    
+    <div class="offering-title">
+      <p class="offering-title_name">{{offering.name}}</p>
+      <p class="offering-title_location">{{offering.location}}</p>
+    </div>
+    <!-- /.offering-title -->
+
+    <div class="offering-image">
+      <img src={{offering.img}} alt="hg">
+    </div>
+    <!-- /.offering-image -->
+
+    <div class="offering-info">
+       
+      <div class="offering-info_invest">
+
+        <div class="offering-info_invest-available">
+          <span>Available to invest</span><span>{{offering.availableToInvest}}</span>
+        </div>
+        <!-- /.offering-info_invest-available -->
+
+        <div class="offering-info_invest-progress">
+          <div class="progress">
+              <div class="progress-bar bg-warning" role="progressbar" [ngStyle]="{'width':offering.mortage}" [ngClass]="{'completed': offering.availableToInvest === 'COMPLETED'}" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>  
+        <!-- /.offering-info_invest-progress -->
+
+        </div>
+        <!-- /.offering-info_invest -->
+
+        <div class="offering-info_detail">
+          <div class="purchase-cost">
+            <span>Purchast cost</span><span>{{offering.purchase}}</span>
+          </div>
+          <div class="min-invest">
+            <span>Min. Investment</span><span>{{offering.minInvest}}</span>
+          </div>
+          <div class="invest-type">
+            <span>Investment Type</span><span>{{offering.investType}}</span>
+          </div>
+          <div class="mortage">
+            <span>Mortage(LTV)</span><span>{{offering.mortage}}</span>
+          </div>
+          <div  class="holding-period">
+            <span>Holding Period</span><span>{{offering.holdingPeriod}}</span>
+          </div>
+          <div  class="exp-return">
+            <span>Expected Return on Equity</span><span>{{offering.expentedReturn}}</span>
+          </div>
+        </div>
+        <!-- /.offering-info_detail -->
+
+      </div>
+      <!-- /.offering-info -->
+
+    <div class="offering-details">
+      <button>MORE DETAILS</button>
+    </div>
+    <!-- /.offering-details -->
+
+  </div>
+  <!-- /.offerig -->
+
+</div>
+<!-- /.offerting-container -->

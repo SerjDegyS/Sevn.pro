@@ -1,21 +1,106 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<nav>
+  <div class="container-fluid">  
+    <div class="row">
+        <div class="col-md-2 left-side">
+            <div class="logo">
+                <a href="#"><img src="../assets/MockData/logo.png" alt="logo"></a>
+            </div>
+            <!-- /.logo -->
+        </div>
+
+        <div class="col-md-10 right-side">
+          <div class="top-nav">
+
+            <div class="top-nav_router-link">
+                <img src="../assets/MockData/List_icon.svg.png" alt=""> 
+                <span>Offerings</span>
+            </div>
+            <!-- /.router-link -->
+
+            <div class="top-nav_user">
+              <div class="top-nav_user-info">
+                  <div class="question">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                    <div class="ntf question-notofication"></div>
+                  </div>
+                  <div class="bell">
+                    <span class="glyphicon glyphicon-bell"></span>
+                    <div class="ntf bell-notofication">5</div>
+                  </div>
+                  <div class="envelope">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <div class="ntf envelope-notofication">12</div>
+                  </div>
+                  <div class="user">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <div class="ntf user-notofication">1</div>
+                  </div>
+                  
+              </div>
+              <!-- /.top-nav_user-info -->
+
+              <div class="top-nav_user-toggle">
+                <!--Get bootstrap dropdown menu-->
+                <div class="dropdown">
+                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      James Tortis
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Notifications</a>
+                      <a class="dropdown-item" href="#">Messages</a>
+                      <a class="dropdown-item" href="#">Offerings</a>
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Settings</a>
+                      <a class="dropdown-item" href="#">Log-Out</a>
+                    </div>
+                  </div>
+              </div>
+              <!-- /.top-nav_user-menu -->
+
+              
+
+            </div>
+            <!-- /.top-nav_user -->
+          </div>
+          <!-- /.top-nav -->
+        </div> 
+
+      </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+      
+    <div class="col-md-2 left-side">
+
+        <div class="left-sidebar">
+
+            <ul class="left-sidebar_menu">
+              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">DASHBOARD</a></li>
+              <li><a href="offerings"><img src="../assets/MockData/offerings.png" alt="">OFFERINGS</a></li>
+              <li><a href="#"><img src="../assets/MockData/transactions.png" alt="">TRANSACTIONS</a></li>
+              <li><a href="#"><img src="../assets/MockData/settings.png" alt="">SETTING</a></li>
+              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
+              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
+            </ul>
+            <!--/left-sidebar_menu-->
+        
+        </div>
+        <!-- /.left-sidebar -->
+    </div>
+
+  <div class="col-md-10">
+      <router-outlet></router-outlet>
+  </div>
+
+  </div>
+</div>
+
+  
+
+
+
+

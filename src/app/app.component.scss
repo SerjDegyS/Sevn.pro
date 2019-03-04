@@ -1,0 +1,146 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+@mixin border-menu-style () {
+    color: $menu-color;
+    border-bottom: 2px $menu-border-color solid;
+    &:hover{
+        background: #9caebe7a;
+    }
+}
+
+$body-bg: #ebedef;
+$menu-bg: #1f2b3e;
+$white: #ffffff;
+$menu-color: #9caebe;
+$menu-weight: 600;
+$menu-border-color: #263546eb;
+$user-info-ntf-color: #fe8033;
+
+
+
+.container-fluid{
+    padding: 0 0;
+    overflow: hidden;
+}
+
+.left-side{
+    padding-right: 0;
+
+}
+
+.right-side{
+    padding-left: 0;
+}
+
+.logo{
+    background: $menu-bg;
+    height: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+.left-sidebar{
+    background-color: $menu-bg;
+    // width: 100%;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    min-height: 100vh;
+    &_menu{
+        list-style: none;
+        padding: 0;
+        font-size: 10px;
+        // :first-child don't work!
+        &:first-of-type {
+            border-top: 2px $menu-border-color solid;
+        }
+        li{
+            
+            @include border-menu-style();
+            a{
+                display: block;
+                padding: 15px 10px;
+                color: $menu-color;
+                font-weight: $menu-weight;
+                text-decoration: none;
+            }
+            img{
+                width: 16px;
+                margin-right: 10px; 
+            }
+        }
+    }
+}
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px $menu-color solid;
+    height: 40px;
+    &_router-link{
+        color: $menu-color;
+        img{
+         margin: 0 15px;
+         width: 20px;
+        }
+    }
+    &_user{
+        display: flex;
+        margin-top: 10px;
+        &-info{
+            display: flex;
+            justify-content: space-between;
+            div{
+                position: relative;
+            }
+            span{
+                position: relative;
+                margin: 0 10px;
+            }
+            .ntf{
+                position: absolute;
+                top: -5px;
+                right: 1px;
+                background: $user-info-ntf-color;
+                font-size: 10px;
+                padding: 0 1px;
+                width: 14px;
+                text-align: center;
+            }
+        }
+
+        &-toggle{
+            margin: 0 20px 0 10px;
+            text-decoration: none;
+            a{
+                // text-decoration: none;
+                color: black;
+            }
+            // Modificate bootsrap dropdown menu
+            & .dropdown-menu{
+                top: 6px !important;
+                left: 6px !important;
+                font-size: 13px;
+                text-transform: uppercase;
+                background: $menu-bg;
+                z-index: 999999;
+
+                // width: 100%;
+                a{
+                    padding: 5px 15px 5px 15px !important;
+                    @include border-menu-style();
+                    color: $menu-color;
+                }
+            }
+        
+        }
+    }
+    
+}
+
+
+
+
+
