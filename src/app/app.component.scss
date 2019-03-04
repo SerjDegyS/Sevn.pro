@@ -140,6 +140,12 @@ $user-info-ntf-color: #fe8033;
     
 }
 
+@media screen and (max-width: 770px){
+    .left-sidebar{
+        min-height: 0;
+    }
+}
+
 
 
 

@@ -11,7 +11,7 @@ $info-border-color: #9caebe;
 
 .offering{
     width: 25%;
-    min-width: 250px;
+    min-width: 300px;
     background: white;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -79,4 +79,12 @@ $info-border-color: #9caebe;
 
 .completed{
     background: linear-gradient(to right,green , #f1da366b) !important;
+}
+
+@media screen and (max-width: 770px){
+    .offering-container{
+        justify-content: center;
+    }
+
+    
 }
