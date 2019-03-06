@@ -66,13 +66,50 @@
       </div>
       <!-- /.offering-info -->
 
-    <div class="offering-details">
-      <button>MORE DETAILS</button>
+    <div class=" btn-container" [ngSwitch]="(hasUserOffer(offering)) ? 2 : (offering.mortage == 0) ? 1 : (offering.mortage == 100) ? 3 : 4">
+
+      <div class="pre-subscribe_btn" *ngSwitchCase="1">
+        <button>PRE-SUBSCRIBE</button>
+      </div>
+
+      <div class="new-invest_btn" *ngSwitchCase="2">
+        <button>NEW INVEST</button>
+      </div>
+
+      <div class="waiting-list_btn" *ngSwitchCase="3">
+        <button>ADD TO WAITING LIST</button>
+      </div>
+
+      <div class="offering-details_btn" *ngSwitchDefault >
+        <button>MORE DETAILS</button>
+      </div>
+    
+      
     </div>
-    <!-- /.offering-details -->
+    <!-- /.btn-container -->
 
   </div>
   <!-- /.left-side -->
 
   </div>
   <!-- /.offerig -->
+
+  <!-- <ng-template #more-detail>
+      <div class="offering-details_btn">
+          <button>MORE DETAILS</button>
+      </div>
+  </ng-template>
+
+  <ng-template #waiting-list>
+      <div class="waiting-list_btn">
+          <button>ADD ME TO WAITING LIST</button>
+      </div>
+  </ng-template>
+
+  <ng-template #pre-subscribe>
+      <div class="pre-subscribe_btn">
+          <button>PRE-SUBSCRIBE</button>
+      </div>
+  </ng-template>
+   -->
+  

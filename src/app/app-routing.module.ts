@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OfferingsComponent } from './offerings/offerings.component';
-import { AppComponent } from './app.component';
+
 
 const routes: Routes = [
   // {path: '', component: AppComponent},
@@ -12,4 +12,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}

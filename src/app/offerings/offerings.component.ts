@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OffertingsService } from '../services/offertings.service';
-import { Offering } from './model';
+import { IOffering, IUser } from './models';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-offerings',
@@ -10,17 +11,23 @@ import { Offering } from './model';
 })
 export class OfferingsComponent implements OnInit {
 
-  constructor(private offeringService: OffertingsService) { }
+  constructor(private offeringService: OffertingsService, private userService: UserService) { }
 
-  offerings: Offering[];
-  choosenOffering: Offering;
+  user: IUser;
+  offerings: IOffering[];
+  choosenOffering: IOffering;
 
   ngOnInit() {
     this.offeringService.getOfferings().subscribe(data => {
-      this.offerings = data as Offering[];
+      this.offerings = data;
       console.log(data);
       this.choosenOffering = this.offerings[0];
     })
+
+    this.userService.getUser().subscribe(data => {
+      this.user = data;
+    })
+
   }
 
   showDetail(offering) {

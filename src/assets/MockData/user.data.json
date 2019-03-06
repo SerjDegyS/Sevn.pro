@@ -1,0 +1,24 @@
+{   
+    "id": "1",
+    "name": "James Tortis",
+    "email": "example@email.com",
+    "password": "1234",
+    "notific": [1, 2, 3, 4, 5, 6],
+    "messages": [1, 2, 3, 4],
+    "partners": [1, 2],
+    "offerings":[
+                    {
+                        "id":"3",
+                        "name":"Calla Rossa Complex",
+                        "location":"Carovge, Geneva",
+                        "img":"../../assets/MockData/img3.jpg",
+                        "availableToInvest":"CHF 10'000'000",
+                        "purchase":"CHF 22'000'000",
+                        "minInvest":"CHF 100'000",
+                        "investType":"Co-Ownership",
+                        "mortage":"60%",
+                        "holdingPeriod":"5 yeras",
+                        "expentedReturn":"6.00%"  
+                    }
+                ]
+}

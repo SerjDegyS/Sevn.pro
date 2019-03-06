@@ -66,24 +66,66 @@ $info-border-color: #9caebe;
                     display: flex;
                     justify-content: space-between;
                     padding: 18px 14px;
-                    // border-bottom: $info-border-color 1px solid;
+                    span{
+                        text-align: left
+                    }
+                    span:last-child{
+                        text-align: right;
+                    }
                 }
             }
         }
     }
-    &-details{
+    .btn-container{
         text-align: center;
         padding-bottom: 15px;
-        button{
-            border: none;
-            border-radius: 3px;
-            background: orange;
-            font-size: 10px;
-            padding: 5px 15px;
-            color: white;
-            font-weight: 600;
+            .offering-details_btn button{
+                border: none;
+                border-radius: 3px;
+                background: orange;
+                font-size: 10px;
+                padding: 5px 15px;
+                color: white;
+                font-weight: 600;
+            }
+            .pre-subscribe_btn button{
+                border: none;
+                border-radius: 3px;
+                background:blue;
+                font-size: 10px;
+                padding: 5px 15px;
+                color: white;
+                font-weight: 600;
+            }
+            .waiting-list_btn button{
+                border: none;
+                border-radius: 3px;
+                background:mediumaquamarine;
+                font-size: 10px;
+                padding: 5px 15px;
+                color: white;
+                font-weight: 600;
+            }
+            .new-invest_btn button{
+                border: none;
+                border-radius: 3px;
+                background:green;
+                font-size: 10px;
+                padding: 5px 15px;
+                color: white;
+                font-weight: 600;
+            }
         }
-    }
+        // butto{
+        //     border: none;
+        //     border-radius: 3px;
+        //     background: orange;
+        //     font-size: 10px;
+        //     padding: 5px 15px;
+        //     color: white;
+        //     font-weight: 600;
+        // }
+    
 
 }
 

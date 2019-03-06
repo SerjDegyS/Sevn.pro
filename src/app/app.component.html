@@ -26,15 +26,15 @@
                   </div>
                   <div class="bell">
                     <span class="glyphicon glyphicon-bell"></span>
-                    <div class="ntf bell-notofication">5</div>
+                    <div class="ntf bell-notofication">{{user.notific.length}}</div>
                   </div>
                   <div class="envelope">
                     <span class="glyphicon glyphicon-envelope"></span>
-                    <div class="ntf envelope-notofication">12</div>
+                    <div class="ntf envelope-notofication">{{user.messages.length}}</div>
                   </div>
                   <div class="user">
                     <span class="glyphicon glyphicon-user"></span>
-                    <div class="ntf user-notofication">1</div>
+                    <div class="ntf user-notofication">{{user.partners.length}}</div>
                   </div>
                   
               </div>
@@ -44,7 +44,7 @@
                 <!--Get bootstrap dropdown-->
                 <div class="dropdown">
                     <a class=" dropdown-toggle user-toggle">
-                      James Tortis
+                      {{user.name}}
                     </a>
                   
                    

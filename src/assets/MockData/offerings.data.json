@@ -20,7 +20,7 @@
     "purchase":"CHF 25'000'000",
     "minInvest":"CHF 500'000",
     "investType":"Co-Ownership",
-    "mortage":"30%",
+    "mortage":"0",
     "holdingPeriod":"8 yeras",
     "expentedReturn":"5.20%"
 },
@@ -46,7 +46,7 @@
     "purchase":"CHF 8'000'000",
     "minInvest":"CHF 250'000",
     "investType":"Mezzanine Debt",
-    "mortage":"100%",
+    "mortage":"100",
     "holdingPeriod":"9 yeras",
     "expentedReturn":"6.50%"   
 }

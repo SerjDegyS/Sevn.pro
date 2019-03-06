@@ -7,6 +7,7 @@ import { OfferingsComponent } from './offerings/offerings.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { OffertingsService } from './services/offertings.service';
 import { OfferingDetailComponent } from './offerings/offering-detail/offering-detail.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [

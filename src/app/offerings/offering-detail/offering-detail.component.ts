@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Offering } from '../model';
+import { IOffering, IUser } from '../models';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-offering-detail',
@@ -8,13 +9,25 @@ import { Offering } from '../model';
 })
 export class OfferingDetailComponent implements OnInit {
 
-  @Input() offering: Offering;
+  @Input() offering: IOffering;
+  user: IUser;
+  offeringState: boolean = false;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    console.log(this.offering);
     
+    this.userService.getUser().subscribe(data => {
+      this.user = data;
+      // console.log (this.user);
+    })
+  }
+
+  hasUserOffer(offering): boolean {
+    // console.log(this.user.offerings.includes(this.offering));
+    
+    return !(this.user.offerings.filter(offer => offering.id === offer.id).length === 0);
+
   }
 
 }
