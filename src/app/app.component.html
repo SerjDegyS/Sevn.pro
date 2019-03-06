@@ -40,21 +40,14 @@
               </div>
               <!-- /.top-nav_user-info -->
 
-              <div class="top-nav_user-toggle">
-                <!--Get bootstrap dropdown menu-->
+              <div class="top-nav_user-toggle" (click)="userToggleMenu()">
+                <!--Get bootstrap dropdown-->
                 <div class="dropdown">
-                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class=" dropdown-toggle user-toggle">
                       James Tortis
                     </a>
                   
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="#">Notifications</a>
-                      <a class="dropdown-item" href="#">Messages</a>
-                      <a class="dropdown-item" href="#">Offerings</a>
-                      <a class="dropdown-item" href="#">Profile</a>
-                      <a class="dropdown-item" href="#">Settings</a>
-                      <a class="dropdown-item" href="#">Log-Out</a>
-                    </div>
+                   
                   </div>
               </div>
               <!-- /.top-nav_user-menu -->
@@ -65,6 +58,17 @@
             <!-- /.top-nav_user -->
           </div>
           <!-- /.top-nav -->
+
+          <ul class="user-menu" [ngClass]="{'show_user-menu': showUserMenu}">
+            <li><a class="user-menu_item" href="#">Notifications</a></li>
+            <li><a class="user-menu_item" href="#">Messages</a></li>
+            <li><a class="user-menu_item" href="#">Offerings</a></li>
+            <li><a class="user-menu_item" href="#">Profile</a></li>
+            <li><a class="user-menu_item" href="#">Settings</a></li>
+            <li><a class="user-menu_item" href="#">Log-Out</a></li>
+          </ul>
+          <!-- /.user-menu -->
+
         </div> 
 
       </div>
@@ -76,24 +80,32 @@
       
     <div class="col-md-2 left-side">
 
-        <div class="left-sidebar">
+      <div class="left-sidebar">
 
-            <ul class="left-sidebar_menu">
-              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">DASHBOARD</a></li>
-              <li><a href="offerings"><img src="../assets/MockData/offerings.png" alt="">OFFERINGS</a></li>
-              <li><a href="#"><img src="../assets/MockData/transactions.png" alt="">TRANSACTIONS</a></li>
-              <li><a href="#"><img src="../assets/MockData/settings.png" alt="">SETTING</a></li>
-              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
-              <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
-            </ul>
-            <!--/left-sidebar_menu-->
+        <div class="left-sidebar-toggle">
+
+        </div>
+
+        <ul class="left-sidebar_menu" >
+          <li class="left-sidebar_menu-toggle" (click)="sidebarMenuToggle()"><span class="fa fa-navicon" style="font-size:36px"></span></li>
+          <div class="show-menu" [ngClass]="{'show_sidebar-menu': showSidebarMenu}">
+          <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">DASHBOARD</a></li>
+          <li><a href="offerings"><img src="../assets/MockData/offerings.png" alt="">OFFERINGS</a></li>
+          <li><a href="#"><img src="../assets/MockData/transactions.png" alt="">TRANSACTIONS</a></li>              <li><a href="#"><img src="../assets/MockData/settings.png" alt="">SETTING</a></li>
+          <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
+          <li><a href="#"><img src="../assets/MockData/dashboard.png" alt="">Value</a></li>
+        </div>
+        </ul>
+        <!--/left-sidebar_menu-->
         
         </div>
         <!-- /.left-sidebar -->
     </div>
 
   <div class="col-md-10">
+    <div class="router-container">
       <router-outlet></router-outlet>
+    </div>  
   </div>
 
   </div>

@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'foxtone';
+  
+  showUserMenu: boolean = false;
+  showSidebarMenu: boolean = false;
+
+  userToggleMenu() {
+    this.showUserMenu = !this.showUserMenu;
+  }
+
+  sidebarMenuToggle() {
+    this.showSidebarMenu = !this.showSidebarMenu;
+    console.log(this.showSidebarMenu);
+    
+  }
+
 }

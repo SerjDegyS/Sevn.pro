@@ -1,23 +1,18 @@
 
-<div class="offering-detail-container">
-    <app-offering-detail class="showDetail" [offering] = 'choosenOffering' ></app-offering-detail>
-</div>
-<!-- /.offering-detail-container -->
+<div class="offering">
 
-<div class="offering-container">
+    <div class="offering-image">
+        <img src={{offering.img}} alt="hg">
+      </div>
+      <!-- /.offering-image -->
 
-  <div class="offering" *ngFor="let offering of offerings" (click)="showDetail(offering)">
-    
+  <div class="left-side">
+      
     <div class="offering-title">
       <p class="offering-title_name">{{offering.name}}</p>
       <p class="offering-title_location">{{offering.location}}</p>
     </div>
     <!-- /.offering-title -->
-
-    <div class="offering-image">
-      <img src={{offering.img}} alt="hg">
-    </div>
-    <!-- /.offering-image -->
 
     <div class="offering-info">
        
@@ -37,26 +32,34 @@
 
         </div>
         <!-- /.offering-info_invest -->
-
+        
         <div class="offering-info_detail">
-          <div class="purchase-cost">
-            <span>Purchast cost</span><span>{{offering.purchase}}</span>
+          <div class="offering-info_detail-left">
+            <div class="purchase-cost">
+              <span>Purchast cost</span><span>{{offering.purchase}}</span>
+            </div>
+            <div class="min-invest">
+              <span>Min. Investment</span><span>{{offering.minInvest}}</span>
+            </div>
+            <div class="invest-type">
+              <span>Investment Type</span><span>{{offering.investType}}</span>
+            </div>
           </div>
-          <div class="min-invest">
-            <span>Min. Investment</span><span>{{offering.minInvest}}</span>
+          <!-- /.offering-info_detail-left -->
+
+          <div class="offering-info_detail-right">
+            <div class="mortage">
+              <span>Mortage(LTV)</span><span>{{offering.mortage}}</span>
+            </div>
+            <div  class="holding-period">
+              <span>Holding Period</span><span>{{offering.holdingPeriod}}</span>
+            </div>
+            <div  class="exp-return">
+              <span>Expected Return</span><span>{{offering.expentedReturn}}</span>
+            </div>
           </div>
-          <div class="invest-type">
-            <span>Investment Type</span><span>{{offering.investType}}</span>
-          </div>
-          <div class="mortage">
-            <span>Mortage(LTV)</span><span>{{offering.mortage}}</span>
-          </div>
-          <div  class="holding-period">
-            <span>Holding Period</span><span>{{offering.holdingPeriod}}</span>
-          </div>
-          <div  class="exp-return">
-            <span>Expected Return on Equity</span><span>{{offering.expentedReturn}}</span>
-          </div>
+          <!-- /.offering-info_detail-right -->
+
         </div>
         <!-- /.offering-info_detail -->
 
@@ -69,7 +72,7 @@
     <!-- /.offering-details -->
 
   </div>
-  <!-- /.offerig -->
+  <!-- /.left-side -->
 
-</div>
-<!-- /.offerting-container -->
+  </div>
+  <!-- /.offerig -->

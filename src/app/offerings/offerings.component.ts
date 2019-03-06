@@ -13,13 +13,20 @@ export class OfferingsComponent implements OnInit {
   constructor(private offeringService: OffertingsService) { }
 
   offerings: Offering[];
+  choosenOffering: Offering;
 
   ngOnInit() {
     this.offeringService.getOfferings().subscribe(data => {
       this.offerings = data as Offering[];
       console.log(data);
-      
+      this.choosenOffering = this.offerings[0];
     })
+  }
+
+  showDetail(offering) {
+    this.choosenOffering = offering;
+    console.log(offering);
+    
   }
 
 }

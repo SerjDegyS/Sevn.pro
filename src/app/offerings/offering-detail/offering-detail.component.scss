@@ -1,20 +1,27 @@
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
-
 $title-bg: #1f2b3e;
 $title-color: #e3e3e3;
 $info-border-color: #9caebe;
 
-.offering-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .offering{
-    width: 25%;
+    // width: 95%;
+    max-width: 1050px;
     min-width: 300px;
     background: white;
     margin: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 320px;
+    &-image{
+        width: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .left-side{
+        width: 50%;
+    }
     &-title{
         background: $title-bg;
         color: $title-color;
@@ -24,22 +31,18 @@ $info-border-color: #9caebe;
         font-weight: 600;
         &_name{
             margin: 0;
-            font-size: 12px;
+            font-size: 14px;
         }
         &_location{
             margin: 0;
-            font-size: 9px;
+            font-size: 11px;
         }
-    }
-    &-image img{
-            width: 100%;
-            height: 120px;
     }
 
     &-info{
-        padding: 15px 0;
+        padding: 15px 0 0 0;
         font-size: 10px;
-        font-weight: 700;
+        font-weight: 800;
         &_invest{
             padding: 0 10px;
             &-available{
@@ -55,11 +58,16 @@ $info-border-color: #9caebe;
             }
         }
         &_detail{
-            div{
-                display: flex;
-                justify-content: space-between;
-                padding: 8px 13px;
-                border-bottom: $info-border-color 1px solid;
+            display: flex;
+            justify-content: space-around;
+            &-left, &-right{
+                width: 50%;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 18px 14px;
+                    // border-bottom: $info-border-color 1px solid;
+                }
             }
         }
     }
@@ -76,18 +84,7 @@ $info-border-color: #9caebe;
             font-weight: 600;
         }
     }
+
 }
 
-.completed{
-    background: linear-gradient(to right,green , #f1da366b) !important;
-}
 
-@media screen and (max-width: 770px){
-    .offering-container{
-        justify-content: center;
-    }
-
-    .showDetail{
-        display: none;
-    }
-}
